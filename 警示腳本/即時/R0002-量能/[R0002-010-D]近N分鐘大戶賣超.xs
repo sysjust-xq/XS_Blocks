@@ -1,0 +1,24 @@
+{@type:sensor}
+// 腳本類型: 警示腳本
+// 腳本名稱: 近N分鐘大戶賣超
+// 顯示名稱: [近15分鐘]大戶賣超
+// 執行頻率: 1分(非逐筆洗價)
+// 
+// 大戶為「特大單+大單」而近N分鐘大戶賣超，是累計近N分鐘的賣超。
+// _p1參數: 1分鐘的期數
+// _p1數值: 5=[近5分鐘],10=[近10分鐘],15=[近15分鐘]
+// 
+Input: _p1(15);
+array:_Large[](0);
+var:_Count(0);
+SetTotalBar(60);
+Array_SetMaxIndex(_Large, _p1);
+if getfieldDate("Date") <> getfieldDate("Date")[1] then begin
+        _Count = 0;
+        Array_SetValRange(_Large, 1, _p1, 0);
+end else begin
+        _Count += 1;
+end;
+value99 = mod(_count,_p1) + 1;
+_Large[value99] = -1 * sign(GetField("買進大單金額", "1") + GetField("買進特大單金額", "1") - GetField("賣出大單金額", "1") - GetField("賣出特大單金額", "1"));
+if Array_Sum(_Large, 1, _p1) = _p1 then ret = 1;
