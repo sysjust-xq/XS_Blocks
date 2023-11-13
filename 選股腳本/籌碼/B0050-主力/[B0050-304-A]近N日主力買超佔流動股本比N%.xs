@@ -11,9 +11,9 @@
 // 
 input:_p1(5);
 input:_p2(3); 
-SetTotalBar(_p1+2); 
+SetTotalBar(2); 
 Value1 = Summation(GetField("主力買賣超張數"), _p1);
-value2 = GetField("發行張數(張)")- GetField("董監持股");
+value2 = GetField("發行張數(張)")- GetField("董監持股","M");
 If value2 <> 0 then  value3 = (value1/value2)*100 ;
 if value3 > 0 and value3 > _p2 then ret=1; 
 OutputField(1, Value3);

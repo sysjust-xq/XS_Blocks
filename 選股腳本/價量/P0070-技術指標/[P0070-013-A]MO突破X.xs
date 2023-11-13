@@ -9,5 +9,5 @@
 // 
 input:length(10,"期數"),_p1(100);
 value1 = MO(10);  
-settotalBar(10*2);
+settotalBar(length*2);
 If value1 cross above _p1 then ret = 1;

@@ -9,5 +9,5 @@
 // 
 input:length(10,"期數"),_p1(0);
 value1 = DPO(10);  
-settotalBar(10+2);
+settotalBar(length+2);
 If value1 cross below _p1 then ret = 1;
