@@ -7,10 +7,10 @@
 // _p1參數: 
 // _p1數值: 4,8,12,16
 // _p2參數: 
-// _p2數值: 10,50,100,200
+// _p2數值: 1,5,10,15,50,100,200
 // 
 input:_p1(4,numeric);
 input:_p2(10,numeric);
 SetTotalBar(_p1+2); 
-Value1 = GetField("散戶持股人數", param:=_p2)- GetField("散戶持股人數", param:=_p2)[_p1];
-if Value1 < 0 then ret=value1 ;
+Value1 = GetField("散戶持股人數","W", param:=_p2)- GetField("散戶持股人數","W", param:=_p2)[_p1];
+if Value1 < 0 then retval=value1 else return;

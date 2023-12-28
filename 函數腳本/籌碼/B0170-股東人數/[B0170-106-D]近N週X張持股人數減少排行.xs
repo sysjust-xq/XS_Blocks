@@ -10,6 +10,8 @@
 // _p2數值: 400,600,800,1000
 // 
 input:_p1(4,numeric),_p2(1000,numeric);
-If GetField("大戶持股人數", param:=_p2)-GetField("大戶持股人數", param:=_p2)[_p1] < 0
+If GetField("大戶持股人數","W", param:=_p2)-GetField("大戶持股人數","W", param:=_p2)[_p1] < 0
 then 
-retval =GetField("大戶持股人數", param:=_p2)-GetField("大戶持股人數", param:=_p2)[_p1];
+retval =GetField("大戶持股人數","W", param:=_p2)-GetField("大戶持股人數","W", param:=_p2)[_p1]
+else
+return;

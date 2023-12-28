@@ -5,8 +5,8 @@
 // 執行頻率: 週
 // 
 // _p1參數: 
-// _p1數值: 10,50,100,200
+// _p1數值: 1,5,10,15,50,100,200
 // 
 input:_p1(10,numeric);
 SetTotalBar(2); 
-ret= GetField("散戶持股人數", param:=_p1);
+retval= GetField("散戶持股人數","W", param:=_p1);

@@ -14,7 +14,7 @@ input:_p2(0.3);
 SetTotalBar(_p1+2);
 Value1 = GetField("主力買賣超張數");
 value2 = GetField("發行張數(張)");
-if value2<> 0 and summation(value1,_p1) < 0 and 
+if value2<> 0 and summation(value1,_p1) > 0 and 
 (summation(value1,_p1)/value2)*100 > _p2 then ret = 1;
 OutputField(1,(summation(value1,_p1)/value2)*100);
 OutputField2(Value2);
