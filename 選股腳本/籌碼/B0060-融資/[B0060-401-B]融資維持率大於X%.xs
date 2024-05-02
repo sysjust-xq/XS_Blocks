@@ -10,5 +10,5 @@
 input:_p1(150);
 SetTotalBar(2); 
 Value1 = GetField("融資維持率");
-if Value1 >= _p1 then ret=1; 
+if Value1 >= _p1 and getfield("融資餘額張數") > 0 then ret=1; 
 OutputField(1, Value1);

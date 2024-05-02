@@ -7,4 +7,4 @@
 // 
 settotalBar(3);                                                                     
 Input:p1(3);                                                                  
-If GetField("投信買賣超")>=8*Highest(absvalue(GetField("投信買賣超")[1]),p1) then ret = 1;
+If GetField("投信買賣超")>8*Highest(absvalue(GetField("投信買賣超")[1]),p1) then ret = 1;

@@ -10,7 +10,7 @@
 input:_p1(5);
 If GetField("殖利率")<> 0 then 
 value1=GetField("殖利率")*1+GetField("累計營收年增率","M");
-If value1 > _p1 then ret = 1;
+If value1 > _p1 and GetField("殖利率") <> 0 then ret = 1;
 outputField1(value1,"預估殖利率");
 outputField2(GetField("殖利率"),"殖利率");
 outputField3(GetField("累計營收年增率","M"),"累計營收年增率");

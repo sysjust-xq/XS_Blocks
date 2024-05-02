@@ -15,6 +15,6 @@ if _p1 <= 1 then begin
     ret = 1;
 end else begin
     Value2 = SimpleLowest(GetField("融資維持率")[1], _p1-1);
-    if Value1 < Value2 then ret = 1;
+    if Value1 < Value2 and getfield("融資餘額張數") > 0 then ret = 1;
 end;
 OutputField(1, Value1);

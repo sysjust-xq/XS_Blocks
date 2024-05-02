@@ -17,5 +17,5 @@ if _p1 = 0 then value11 = GetField("殖利率");
 if _p1 = 1 then value11 = GetField("現金股利殖利率");
 if _p1 = 2 then value11 = GetField("股票股利殖利率");
 if _p2 = 0 and Value11 > 0 then ret=1;
-if _p2 <> 0 and value11 >= _p2 then ret=1; 
+if _p2 <> 0 and value11 >= _p2 and value11 <> 0 then ret=1; 
 OutputField(1, Value11);

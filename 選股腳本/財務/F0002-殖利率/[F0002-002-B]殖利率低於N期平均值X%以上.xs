@@ -21,7 +21,7 @@ value1 = GetField("殖利率");
 value2 = Average(GetField("殖利率"),days);
 value3 = value1 - value2;
 if _p2 = 0 and value3 < 0 then ret=1;
-if _p2 <> 0 and value3 <= -1*_p2 then ret=1;
+if _p2 <> 0 and value3 <= -1*_p2 and GetField("殖利率") <> 0 then ret=1;
 
 Outputfield(1, value1, 3, "殖利率");
 Outputfield(2, value2, 3, "平均值");

@@ -10,5 +10,5 @@
 input: _p1(10);
 SetTotalBar(_p1+2);
 if CurrentBar < GetTotalBar then return;
-ret = UpTrend(GetField("融資維持率"), _p1); 
+ret = UpTrend(GetField("融資維持率"), _p1) and getfield("融資餘額張數") > 0; 
 OutputField(1, GetField("融資維持率"));

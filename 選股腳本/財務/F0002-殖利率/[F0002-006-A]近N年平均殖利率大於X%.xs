@@ -24,6 +24,6 @@ var: days(0);
 if _p1 > 0 then days = _p1 else days = GetBarOffsetForYears(-1*_p1);
 if days = 0 then return;  // 不足日期的股票不選
 value2 = Average(value11,days);
-If value2 >_p3 then ret = 1;
+If value2 >_p3  and GetField("殖利率") <> 0 then ret = 1;
 Outputfield(1, value11, 3, "殖利率");
 Outputfield(2, value2, 3, "平均值");

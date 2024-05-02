@@ -15,4 +15,4 @@ if CurrentBar < GetTotalBar - 1 then return;//實際上只跑最新二根
 if _p1 > 0 then days = _p1 else days = GetBarOffsetForYears(-1*_p1);
 if days <= 0 then return;// 不足日期的股票不選
 value1 = SimpleHighest(GetField("殖利率")[1],days-1);
-if GetField("殖利率") > value1 then ret=1;
+if GetField("殖利率") > value1 and GetField("殖利率") <> 0 then ret=1;

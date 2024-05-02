@@ -19,4 +19,4 @@ if _p1 > 0 then days = _p1 else days = GetBarOffsetForYears(-1*_p1);
 if days <= 0 then return;// 不足日期的股票不選
 value1 = SimpleHighest(GetField("殖利率")[1],days-1);
 value2 = value1*(100-_p2)*0.01;
-if GetField("殖利率") < value1 and GetField("殖利率") > value2 then ret=1;
+if GetField("殖利率") < value1 and GetField("殖利率") > value2 and GetField("殖利率") <> 0 then ret=1;

@@ -12,6 +12,7 @@
 SetTotalBar(3);
 input:_p1(3);
 input:_p2(150);
-If GetField("融資維持率") < _p2 and highest(GetField("融資維持率"),_p1) >_p2 and GetField("融資維持率")> 0 then ret = 1;
+If GetField("融資維持率") < _p2 and highest(GetField("融資維持率"),_p1) >_p2 
+and GetField("融資維持率")> 0 then ret = 1;
 outputField1(GetField("融資維持率"),"今天融資維持率");
 outputField2(highest(GetField("融資維持率"),_p1),"近N日最低融資維持率");
