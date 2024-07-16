@@ -12,4 +12,4 @@ SetTotalBar(_p1+2);
 Value1 = 
 (GetField("大戶持股張數", "W", param := 100) + GetField("散戶持股張數","W",param := 100)) / GetField("總持股人數","W")-
 (GetField("大戶持股張數", "W", param := 100)[_p1] + GetField("散戶持股張數","W",param := 100)[_p1]) / GetField("總持股人數","W")[_p1];
-if Value1 > 0 then retval=value1 else return;
+if Value1 > 0 then retval=value1 else return ;

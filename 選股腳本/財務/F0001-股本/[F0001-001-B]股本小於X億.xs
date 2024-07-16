@@ -10,5 +10,5 @@
 input:_p1(5);
 SetTotalBar(2); 
 Value1 = GetField("股本(億)");
-if Value1 < _p1 then ret=1; 
+if Value1 < _p1 and Value1 > 0 then ret=1; 
 OutputField(1, Value1, 2, "股本(億)");

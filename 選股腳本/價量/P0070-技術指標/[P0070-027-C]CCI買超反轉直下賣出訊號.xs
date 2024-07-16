@@ -6,7 +6,7 @@
 // 
 // 
 Variable: Length(14), AvgLength(9), OverSold(-200),cciValue(0), cciMAValue(0),KPrice(0);
-settotalBar(16);
+SetTotalBar(27);
 cciValue = CommodityChannel(Length);
 cciMAValue = Average(cciValue, AvgLength);
 if cciMAValue Crosses Above OverSold then KPrice = L; 
